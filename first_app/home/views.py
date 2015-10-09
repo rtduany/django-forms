@@ -6,11 +6,15 @@ from .forms import StudentForm
 
 
 def index(request):
+	context = {
+		"hello_message": "Register new student"
+		"form": form
+	}
 	form = StudentForm(request.POST or None)
 	if form.is_Valid():
 		form.save()
 	context = {
-		"hello_message": "hello Moringa"
+		"hello_message": "student saved"
 		"form": form
-	}
+
 	return render(request, 'index.html' , context)

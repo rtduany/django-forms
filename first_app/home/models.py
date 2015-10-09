@@ -7,7 +7,7 @@ class student(models.Model):
 	full_name = models.CharField(max_length=200)
 	age = models.IntegerField()
 	email = models.EmailField()
-	interests = models.TextFields()
+	interests = models.TextField()
 	registered_date = models.DateField(auto_now=False, auto_now_add=True)
 	last_update = models.DateField(auto_now_add=True, blank=False)
 

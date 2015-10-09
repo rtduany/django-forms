@@ -6,6 +6,6 @@ from django.http import HttpResponse
 
 def index(request):
 	context = {
-		"hello_message" : "hello Moringa"
+		"hello_message": "hello Moringa"
 	}
 	return render(request, 'index.html' , context)

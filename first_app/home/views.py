@@ -18,3 +18,9 @@ def index(request):
 		"form": form
 
 	return render(request, 'index.html' , context)
+
+def feedback(request):
+		form = feedbackForm()
+		context = {
+			"form": form
+		}

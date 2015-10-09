@@ -15,3 +15,8 @@ class StudentForm(forms.ModelForm):
 		elif age < 10:
 			raise forms.validationError('you may be young old for this class')
 		return age
+
+class FeedbackForm(forms.form):
+	full_name = forms.CharField()
+	email = forms.EmailField()
+	message = forms.CharField()

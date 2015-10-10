@@ -6,16 +6,24 @@ from .forms import FeedBackForm
 
 
 def index(request):
+	form = StudentForm(request.POST or None)
+
 	context = {
-		"hello_message": "Register new student"
+		"hello_message": "Register new student",
 		"form": form
 	}
-	form = StudentForm(request.POST or None)
+
 	if form.is_Valid():
-		form.save()
+		instance = form.save(commit=False)
+		full_name = form.cleaned_data.get('full_name')
+		if full_name == "ruot":
+			full_name == "Software Engineer"
+		instance.full_name = full_name
+		instance.save()
+
 	context = {
-		"hello_message": "student saved"
-		"form": form
+		"hello_message": "student saved",
+	}
 
 	return render(request, 'index.html' , context)
 
@@ -24,3 +32,4 @@ def feedback(request):
 		context = {
 			"form": form
 		}
+		return render(request, 'feedback.html' , context)

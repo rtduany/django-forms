@@ -1,5 +1,9 @@
 <html>
-	<p>Hello World! this is django</p>
 	<p>{{ hello_message }}</p>
-	<p>{{  }}</p>
+	<form action="" method="post" accept-charset="utf-8">
+		{%csrf_token%}
+		{{ form.as_p }}
+			<p><input type="submit" value="Register"></p>
+	</form>
+
 </html>

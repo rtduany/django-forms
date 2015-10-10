@@ -13,7 +13,7 @@ def index(request):
 		"form": form
 	}
 
-	if form.is_Valid():
+	if form.is_valid():
 		instance = form.save(commit=False)
 		full_name = form.cleaned_data.get('full_name')
 		if full_name == "ruot":
@@ -28,7 +28,10 @@ def index(request):
 	return render(request, 'index.html' , context)
 
 def feedback(request):
-		form = feedbackForm()
+		form = FeedBackForm(request.POST or None)
+		if form.is_valid():
+			for key, value in form.cleaned_data_iteritems():
+				print(key, value)
 		context = {
 			"form": form
 		}

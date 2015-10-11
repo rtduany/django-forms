@@ -27,11 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-EMAIL_HOST
-EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD
-EMAIL_PORT
-EMAIL_USE_TLS
+EMAIL_HOST = 'smtp.mandrillapp.com'
+EMAIL_HOST_USER = 'rtduany@gmail.com'
+EMAIL_HOST_PASSWORD = 'HL9ZKr419CgJAx_NdvUcwg'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 

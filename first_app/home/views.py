@@ -30,7 +30,7 @@ def index(request):
 def feedback(request):
 		form = FeedBackForm(request.POST or None)
 		if form.is_valid():
-			for key, value in form.cleaned_data_iteritems():
+			for key, value in form.cleaned_data.iteritems():
 				print(key, value)
 		context = {
 			"form": form

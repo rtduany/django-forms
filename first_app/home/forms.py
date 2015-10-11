@@ -19,4 +19,11 @@ class StudentForm(forms.ModelForm):
 class FeedBackForm(forms.Form):
 	full_name = forms.CharField()
 	email = forms.EmailField()
-	message = forms.CharField()
+	message = forms.CharField(widget = forms.Textarea)
+
+	def clean_message(self):
+		message = self.cleaned_data.get('message')
+		if message == 'Dirty':
+			message = 'Clean'
+		print(message)
+		return message

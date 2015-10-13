@@ -17,9 +17,6 @@
 		<![endif]-->
 	</head>
 		<!-- use the following template to make the display prettier than what is displayed by django -->
-		{% for student in students %}
-			{{student.full_name}}
-		{% endfor %}
 		<!-- lets make a table to show all students -->
 		<table class="table">
 			<tr>
@@ -28,6 +25,14 @@
 				<th>Email</th>
 				<th>Interests</th>
 			</tr>
+			{% for student in students %}
+				<tr>
+					<td>{{student.full_name}}</td>
+					<td>{{student.age}}</td>
+					<td>{{student.email}}</td>
+					<td>{{student.interests}}</td>
+				</tr>
+			{% endfor %}
 		</table>
 	<body>
 

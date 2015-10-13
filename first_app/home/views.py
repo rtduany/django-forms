@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import StudentForm
 from .forms import FeedBackForm
+from .models import Student
 from django.core.mail import send_mail
 
 # Create your views here.
@@ -43,6 +44,7 @@ def feedback(request):
 		return render(request, 'feedback.html' , context)
 
 def students(request):
-	context = {}
+	students = Student.objects.all()
+	context = {'students': students}
 
 	return render(request, 'students.html' , context)

@@ -1,12 +1,12 @@
 from django import forms
-from .models import student
+from .models import Student
 
 
 class StudentForm(forms.ModelForm):
 	class Meta:
 		# fields = ['full_name', 'email', 'age']
 		exclude = ['last_update']
-		model = student
+		model = Student
 
 	def clean_age(self):
 		age = self.cleaned_data.get('age')

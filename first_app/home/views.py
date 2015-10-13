@@ -44,7 +44,7 @@ def feedback(request):
 		return render(request, 'feedback.html' , context)
 
 def students(request):
-	students = Student.objects.all()
+	students = Student.objects.all().order_by('-last_update').filter(full_name__contains='Jo')
 	context = {'students': students}
 
 	return render(request, 'students.html' , context)

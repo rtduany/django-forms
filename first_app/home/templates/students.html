@@ -32,7 +32,7 @@
 					<td>{{student.age}}</td>
 					<td>{{student.email}}</td>
 					<td>{{student.interests}}</td>
-					<td>{{student.last_update}}</td>
+					<td>{{student.last_update | timesince}}</td>
 				</tr>
 			{% endfor %}
 		</table>

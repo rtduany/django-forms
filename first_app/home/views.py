@@ -35,9 +35,14 @@ def feedback(request):
 			full_name = form.cleaned_data.get('full_name')
 			message = form.cleaned_data.get('message')
 			prepared_message = "You have feedback from {} saying '{}'".format(full_name, message)
-			send_mail('New feedback given', prepared_message, from_email , ['to@example.com'], fail_silently=False)
+			send_mail('New feedback given', prepared_message, from_email , ['rtduany@gmail.com'], fail_silently=False)
 
 		context = {
 			"form": form
 		}
 		return render(request, 'feedback.html' , context)
+
+def students(request):
+	context = {}
+
+	return render(request, 'feedback.html' , context)

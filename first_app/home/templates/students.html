@@ -16,6 +16,10 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
+		<!-- use the following template to make the display prettier than what is displayed by django -->
+		{% for student in students %}
+			{{student.full_name}}
+		{% endfor %}
 		<p>{{students}}</p>
 	<body>
 

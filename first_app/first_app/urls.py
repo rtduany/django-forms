@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
 	url(r'^$', 'home.views.index', name='home'),
 	url(r'^feedback/$', 'home.views.feedback', name='feedback'),
+	url(r'^students/$', 'home.views.students', name='students'),
 	url(r'^admin/', include(admin.site.urls)),
 ]

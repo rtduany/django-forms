@@ -20,7 +20,13 @@
 		{% for student in students %}
 			{{student.full_name}}
 		{% endfor %}
-		<p>{{students}}</p>
+		<!-- lets make a table to show all students -->
+		<table class="table">
+			<tr><th>full_name</th></tr>
+			<tr><th>age</th></tr>
+			<tr><th>email</th></tr>
+			<tr><th>interests</th></tr>
+		</table>
 	<body>
 
 	</body>

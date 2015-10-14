@@ -40,8 +40,11 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+	'dajngo.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'registration',
+	'crispy_forms',
 	'home',
 )
 
@@ -106,3 +109,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True

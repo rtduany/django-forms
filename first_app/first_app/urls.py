@@ -25,3 +25,5 @@ urlpatterns = [
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'^accounts/', include('registration.backends.default.urls')),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root = STATIC_ROOT)

@@ -25,6 +25,8 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
+	<body>
+		<p>Welcome {{request.user}} </p>
 		<!-- use the following template to make the display prettier than what is displayed by django -->
 		<!-- lets make a table to show all students -->
 		<table class="table">
@@ -47,8 +49,6 @@
 				</tr>
 			{% endfor %}
 		</table>
-	<body>
-
 	</body>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -8,7 +8,10 @@ from django.core.mail import send_mail
 
 
 def index(request):
-	return render(request, 'index.html' , context)
+	context = {
+
+	}
+	return render(request, 'bootstrap_index.html' , context)
 
 def register(request):
 	form = StudentForm(request.POST or None)
@@ -29,6 +32,7 @@ def register(request):
 	context = {
 		"hello_message": "student saved",
 	}
+	return render(request, 'index.html' , context)
 
 def feedback(request):
 		form = FeedBackForm(request.POST or None)

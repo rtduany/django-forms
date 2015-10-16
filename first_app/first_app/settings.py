@@ -64,7 +64,8 @@ ROOT_URLCONF = 'first_app.urls'
 TEMPLATES = [
 	{
 		'BACKEND': 'django.template.backends.django.DjangoTemplates',
-		'DIRS': [os.path.join(BASE_DIR, "templates")],
+		'DIRS': [os.path.join(BASE_DIR, "templates"),
+				 os.path.join(BASE_DIR, "templates", "bootstrap")],
 		'APP_DIRS': True,
 		'OPTIONS': {
 			'context_processors': [
@@ -112,7 +113,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static_prod")
 STATICFILES_DIRS = (
-	os.path.join(BASE_DIR, "static")
+	os.path.join(BASE_DIR, "static"),
 	)
 
 ACCOUNT_ACTIVATION_DAYS = 7
